@@ -466,7 +466,12 @@ Module10: Creating Angular Forms
     - Using template variables:
         - https://app.pluralsight.com/ilx/video-courses/d5d30ea4-0af1-447a-b13a-e60a095337a6/a4d43da9-1ae5-4f47-9c17-c1c7d34c0103/c23bf45f-cf22-4384-98d4-6ed032503004
         - open sign-in.component.html
-            
+
+  - Validating Template-driven forms
+    - https://app.pluralsight.com/ilx/video-courses/d5d30ea4-0af1-447a-b13a-e60a095337a6/a4d43da9-1ae5-4f47-9c17-c1c7d34c0103/800632e0-3eb1-493d-baa3-81c73feadc34
+
+    - put validation on sign-in.component.Html
+    
 
 Module11: Organizing Angular Applications with Modules
 
