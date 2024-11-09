@@ -9,16 +9,20 @@
     <div class="sub-text">to acquire awesome bots</div>
     <!-- Next add a template variable for email and set it to ngModel -->
     <input name="email" required email #email="ngModel" [(ngModel)]="credentials.email" placeholder="Email Address"  type="text" />
+    <em class="error" *ngIf="email.errors?.['required'] && email.touched">Email is required</em>
+    <em class="error" *ngIf="email.errors?.['email'] && email.touched">Must be a valid email format</em>
 
     <!-- the below code prints the value of credentials.email to prove 2-way binding works -->
     {{credentials.email}}
 
      <!-- Next add a template variable for password and set it to ngModel -->
-    <input name="password" #password="ngModel" [(ngModel)]="credentials.password" placeholder="Password" type="password" />
+    <input name="password" required #password="ngModel" [(ngModel)]="credentials.password" placeholder="Password" type="password" />
+    <em class="error" *ngIf="password.invalid && password.touched">Password is required</em>
     {{credentials.password}}
 
     <div class="buttons">
-      <button type="submit"class="button cta">
+      <!-- Disable button if any of the fields are invalid. signInForm is the template variable-->
+      <button type="submit" [disabled]="signInForm.form.invalid" class="button cta">
         Sign In
       </button>
     </div>
